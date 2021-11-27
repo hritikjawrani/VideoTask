@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background: #051b33;
 }
 
 
@@ -10,7 +11,6 @@ body {
 .container {
     padding: 20px;
     margin: 0 auto;
-    background: #051b33;
 }
 .container > h2{
     margin-bottom: -29px;
@@ -21,7 +21,7 @@ h2{
 }
 img{
     height:200px;
-    overflow: hidden;
+    overflow: scroll;
     background-size: cover;
 }
 .movie {
@@ -35,11 +35,14 @@ section {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
     transition: 250ms all;
 }
 
+section:after{
+    position: fixed;
+}
 section .imageContainer {
     flex: 0 0 auto;
 }
@@ -51,6 +54,7 @@ section .imageContainer {
     width: 100%;
     border: 1px solid lightgrey;
     padding: 20px;
+    overflow: scroll;
 }
 
 
@@ -106,6 +110,9 @@ section .imageContainer {
     width: 100%;
 }
 
+.movies-container{
+    position: fixed;
+}
 .btn {
     color: #fff;
     background-color: #007bff;
